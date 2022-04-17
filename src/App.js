@@ -22,7 +22,7 @@ const App=()=>{
     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&type=video&key=AIzaSyDtxM0gI2XN7x_07Ll7iQrwdt2VT84_eOQ`, 
       requestOptions)
       .then(response => response.json())
-      .then(result => setVideos(result.items))
+      .then(result => {setVideos(result.items); setSelectedVideo(null)})
       .catch(error => console.log('error', error));
   }
 
@@ -54,8 +54,6 @@ const App=()=>{
             onVideoClick={selectVideo}
             display={selectedVideo ? 'detail' : 'home'}
           />
-        {/* <div className={styles.list}>
-        </div> */}
       </section>
     </div>
   )
