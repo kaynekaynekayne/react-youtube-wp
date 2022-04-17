@@ -6,6 +6,7 @@ const VideoInside=({video})=>{
     return(
         <section className={styles.container}>
         <iframe 
+            className={styles.video}
             type="text/html" 
             width="720" 
             height="405"
