@@ -19,7 +19,7 @@ const App=()=>{
       redirect: 'follow'
     };
     
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&type=video&key=AIzaSyDtxM0gI2XN7x_07Ll7iQrwdt2VT84_eOQ`, 
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=24&q=${query}&type=video&key=AIzaSyDtxM0gI2XN7x_07Ll7iQrwdt2VT84_eOQ`, 
       requestOptions)
       .then(response => response.json())
       .then(result => {setVideos(result.items); setSelectedVideo(null)})

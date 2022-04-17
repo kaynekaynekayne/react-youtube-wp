@@ -1,5 +1,9 @@
-.detail{
-    padding:0.2em;
+.video{
+    padding:0 0.3rem;
+}
+
+.textbox{
+    padding:0 1rem;
 }
 
 .description{

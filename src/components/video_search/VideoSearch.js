@@ -1,7 +1,7 @@
-import React,{useRef} from 'react';
+import React,{useRef,memo} from 'react';
 import styles from './VideoSearch.module.css';
 
-const VideoSearch=({onSearch})=>{
+const VideoSearch=memo(({onSearch})=>{
     const inputRef=useRef();
     const handleEnter=(e)=>{
         if(e.key==='Enter'){
@@ -24,6 +24,6 @@ const VideoSearch=({onSearch})=>{
             <i id={styles.searchLogo} className="fas fa-search"></i>        
     </header>
     )
-}
+});
 
 export default VideoSearch;
