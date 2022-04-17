@@ -1,0 +1,13 @@
+
+.frame{
+    max-width:80rem;
+
+}
+
+.container{
+    display:flex;
+}
+
+.list{
+    justify-content: center;
+}
