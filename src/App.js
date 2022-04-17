@@ -35,6 +35,10 @@ const App=()=>{
     fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=24&key=AIzaSyDtxM0gI2XN7x_07Ll7iQrwdt2VT84_eOQ", 
     requestOptions)
       .then(response => response.json())
+      // .then(result=>
+      //   result.items.map(item=>({...item, id:item.id.videoId}))
+      // )
+      // .then(items => setVideos(items))
       .then(result => setVideos(result.items))
       .catch(error => console.log('error', error));
   },[]);
